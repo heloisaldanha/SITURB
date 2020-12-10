@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<title>Empresa</title>
+	</h:head>
+	
+	<h:body>
+	
+		<h:messages/>
+		<h1>Nova Empresa</h1>
+		
+		<h:form>
+			<fieldset>
+			
+				<p>
+					CNPJ: <h:inputText value="#{Empresa.empresa.cnpj}" size="50"
+					required="true" requiredMessage="CPF: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Razão Social: <h:inputText value="#{Empresa.empresa.razaoSocial}" size="50"
+					required="true" requiredMessage="Razão Social: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					<h:commandButton value="Cadastrar" action="#{Empresa.cadastrar}"/>
+					<h:commandButton value="Voltar" action="#{Empresa.voltar}" immediate="true"/>
+				</p>
+				
+			</fieldset>
+		</h:form>
+		
+	</h:body>
+	
+</html>

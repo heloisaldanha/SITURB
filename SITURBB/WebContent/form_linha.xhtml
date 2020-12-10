@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<title>Linha</title>
+	</h:head>
+	<h:body>
+	
+		<h:messages/>
+		<h1>Nova linha</h1>
+		<!--  Identificação, origem, destino, hora de saída, hora de chegada -->
+		<h:form>
+			<fieldset>
+		
+				<p>
+					Identificação: <h:inputText value="#{Linha.linha.ident}" size="50"
+					required="true" requiredMessage="Indentificação: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Origem: <h:inputText value="#{Linha.linha.origem}" size="50"
+					required="true" requiredMessage="Origem: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Destino: <h:inputText value="#{Linha.linha.destino}" size="50"
+					required="true" requiredMessage="Destino: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Hora de saída: <h:inputText value="#{Linha.linha.horaSaida}" size="10"
+					required="true" requiredMessage="Hora de saída: Campo obrigatório"/>
+				</p>
+				
+				<p>
+					Hora de chegada: <h:inputText value="#{Linha.linha.horaChegada}" size="10"
+					required="true" requiredMessage="Hora de chegada: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					<h:commandButton value="Cadastrar" action="#{Linha.cadastrar}"/>
+					<h:commandButton value="Voltar" action="#{Linha.voltar}" immediate="true"/>
+				</p>
+		
+			</fieldset>
+		</h:form>
+	
+	</h:body>
+
+</html>

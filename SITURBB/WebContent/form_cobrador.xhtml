@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<title>Cobrador</title>
+	</h:head>
+	
+	<h:body>
+	
+		<h:messages/>
+		<h1>Novo cobrador</h1>
+		<!-- Nome, CPF, matrícula, endereço -->
+		<h:form>
+			<fieldset>
+				<p>
+					Nome: <h:inputText value="#{Cobrador.cobrador.nome}" size="50"
+					required="true" requiredMessage="Nome: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					CPF: <h:inputText value="#{Cobrador.cobrador.cpf}" size="50"
+					required="true" requiredMessage="CPF: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Matrícula: <h:inputText value="#{Cobrador.cobrador.matricula}" size="50"
+					required="true" requiredMessage="Matrícula: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Endereço: <h:inputText value="#{Cobrador.cobrador.endereco}" size="50"
+					required="true" requiredMessage="Endereço: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					<h:commandButton value="Cadastrar" action="#{Cobrador.cadastrar}"/>
+					<h:commandButton value="Voltar" action="#{Cobrador.voltar}" immediate="true"/>
+				</p>
+			</fieldset>
+		</h:form>
+	
+	</h:body>
+
+</html>

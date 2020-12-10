@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+		<title>ônibus</title>
+	</h:head>
+
+	<h:body>
+	
+		<h:messages/>
+		<h1>Novo ônibus</h1>
+		
+		<!-- Marca, modelo, empresa, motorista, cobrador, linha -->
+		
+		<h:form>
+			<fieldset>
+			
+				<p>
+					Marca: <h:inputText value="#{Onibus.onibus.marca}" 
+					size="20" required="true" requiredMessage="Marca: Campo obrigatório." />
+					Ano: <h:inputText value="#{Onibus.onibus.ano}" 
+					size="5" required="true" requiredMessage="Ano Campo obrigatório." />
+				</p>
+				
+				<p>
+					Modelo: <h:inputText value="#{Onibus.onibus.modelo}" 
+					size="50" required="true" requiredMessage="Modelo: Campo obrigatório." />
+				</p>
+				
+				<p>
+					Empresa:
+					<h:selectOneMenu value="#{Onibus.onibus.empresa.razaoSocial}">
+					<f:selectItems value="#{Empresa.empresas}" /> 
+					</h:selectOneMenu>	 
+				</p>
+				
+				<p>
+					Motorista:
+					<h:selectOneMenu value="#{Onibus.onibus.motorista.nome}">
+					<f:selectItems value="#{Motorista.motoristas}" /> 
+					</h:selectOneMenu>	
+				</p>
+				
+				<p>
+					Cobrador:
+					<h:selectOneMenu value="#{Onibus.onibus.cobrador.nome}">
+					<f:selectItems value="#{Cobrador.cobradores}" />
+					</h:selectOneMenu>	
+				</p>
+				
+				<p>
+					Linha:
+					<h:selectOneMenu value="#{Onibus.onibus.linha.ident}">
+					<f:selectItems value="#{Linha.linhas}" /> 
+					</h:selectOneMenu>	
+				</p>
+				
+				<p>
+					<h:commandButton value="Cadastrar" action="#{Onibus.cadastrar}"/>
+					<h:commandButton value="Listar" action="#{Onibus.listar}" immediate="true"/>
+					<h:commandButton value="Voltar" action="#{Onibus.voltar}" immediate="true"/> 
+				</p>
+				
+			</fieldset>
+		</h:form>
+		
+	</h:body>
+
+
+</html>

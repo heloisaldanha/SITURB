@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+	<h:head>
+		<title>Motorista</title>
+	</h:head>
+	
+	<h:body>
+	<!-- Nome, CPF, Matrícula, CNH, Categoria, Endereço -->
+		<h:messages/>
+		<h1>Novo Motorista</h1>
+		
+		<h:form>
+			<fieldset>
+		
+				<p>
+					Nome: <h:inputText value="#{Motorista.motorista.nome}" size="50"
+					required="true" requiredMessage="Nome: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					CPF: <h:inputText value="#{Motorista.motorista.cpf}" size="50"
+					required="true" requiredMessage="CPF: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Matrícula: <h:inputText value="#{Motorista.motorista.matricula}" size="50"
+					required="true" requiredMessage="Matrícula: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					CNH: <h:inputText value="#{Motorista.motorista.registroCnh}" size="50"
+					required="true" requiredMessage="CNH: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Categoria: <h:inputText value="#{Motorista.motorista.categoriaCnh}" size="50"
+					required="true" requiredMessage="Categoria CNH: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					Endereço: <h:inputText value="#{Motorista.motorista.endereco}" size="50"
+					required="true" requiredMessage="Endereço: Campo obrigatório."/>
+				</p>
+				
+				<p>
+					<h:commandButton value="Cadastrar" action="#{Motorista.cadastrar}"/>
+					<h:commandButton value="Voltar"  action="#{Motorista.voltar}" immediate="true"/>
+				</p>
+		
+			</fieldset>
+		</h:form>
+	
+	</h:body>
+
+</html>

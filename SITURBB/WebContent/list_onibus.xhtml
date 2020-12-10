@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:head>
+		<title>ônibus</title>
+	</h:head>
+
+	<h:body>
+	
+		<h:form>
+			<h:messages/>
+			<h1>Lista de ônibus</h1>
+			
+			<h:dataTable value="#{Onibus.listagem}" var="onibus" border="1">
+				<h:column>
+					<f:facet name="header">Marca</f:facet>
+					<h:outputText value="#{onibus.marca}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Modelo</f:facet>
+					<h:outputText value="#{onibus.modelo}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Ano</f:facet>
+					<h:outputText value="#{onibus.ano}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Empresa</f:facet>
+					<h:outputText value="#{onibus.empresa}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Motorista</f:facet>
+					<h:outputText value="#{onibus.motorista}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Cobrador</f:facet>
+					<h:outputText value="#{onibus.cobrador}"></h:outputText>
+				</h:column>
+				<h:column>
+					<f:facet name="header">Linha</f:facet>
+					<h:outputText value="#{onibus.linha}"></h:outputText>
+				</h:column>
+				
+			</h:dataTable>
+			
+			<h:commandLink action="#{Onibus.voltar}" value="Voltar"/> <br/>
+		</h:form>
+	</h:body>
+</html>
